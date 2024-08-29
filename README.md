@@ -6,6 +6,7 @@ To get started with this project, follow these steps:
 1. Clone the repository:
 ```bash
 git clone https://github.com/shannontyx/MathOperationsOA.git
+```
 2. Navigate to the project directory:
 ```bash
 cd math-operations-web-app
@@ -30,3 +31,17 @@ npm start
 The React app will run on http://localhost:3001.
 
 Open your browser and navigate to http://localhost:3001 to use the application.
+
+## Running Tests
+1. Frontend Tests
+```bash
+cd client
+npm test
+```
+2. Backend Tests
+```bash
+cd server
+npm test
+```
+
+
