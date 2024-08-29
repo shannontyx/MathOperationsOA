@@ -23,6 +23,7 @@ cd server
 npm run dev
 ```
 The server will run on http://localhost:3000.
+
 2. Start the React frontend:
 ```bash
 cd client
@@ -32,7 +33,7 @@ The React app will run on http://localhost:3001.
 
 Open your browser and navigate to http://localhost:3001 to use the application.
 
-## Running Tests
+### Running Tests
 1. Frontend Tests
 ```bash
 cd client
