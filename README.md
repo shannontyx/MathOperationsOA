@@ -1,5 +1,5 @@
 ## Math Operations Web App
-This project is a simple web application that allows users to perform basic arithmetic operations of addition and subtraction on two numbers. The project is built using React for the frontend and Express for the backend. It also includes unit tests using Jest and React Testing Library for the frontend, and Supertest for the backend.
+This project is a simple web application that allows users to perform basic arithmetic operations of addition and subtraction on two numbers. The project is built using React for the frontend and Express for the backend. It also includes unit tests using Jest and React Testing Library for the frontend, and Jest and Supertest for the backend.
 
 ### Installation
 To get started with this project, follow these steps:
