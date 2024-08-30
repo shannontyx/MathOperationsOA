@@ -7,16 +7,16 @@ To get started with this project, follow these steps:
 ```bash
 git clone https://github.com/shannontyx/MathOperationsOA.git
 ```
-2. Navigate to the project directory:
+2. Navigate to the project directory if not already in it:
 ```bash
-cd math-operations-web-app
+cd MathOperationsOA
 ```
 3. Install the dependencies for both the server and the client:
 ```bash
-npm install
+npm i
 ```
 
-### Usage
+### Usagec
 1. Start the Express server:
 ```bash
 cd server
