@@ -16,7 +16,7 @@ cd MathOperationsOA
 npm i
 ```
 
-### Usagec
+### Usage
 1. Start the Express server:
 ```bash
 cd server
