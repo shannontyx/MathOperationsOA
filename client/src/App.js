@@ -5,37 +5,62 @@ function App() {
   const [num1, setNum1] = useState(''); 
   const [num2, setNum2] = useState(''); 
   const [result, setResult] = useState(null);
+  const [error, setError] = useState('');
 
   // Function to handle addition
   const handleAdd = async () => {
-    const response = await fetch('/api/add', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: new URLSearchParams({
-        num1: num1,
-        num2: num2
-      })
-    });
-    const data = await response.json();
-    setResult(data.result);
+    try {
+      const response = await fetch('/api/add', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({
+          num1: num1,
+          num2: num2
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('Request failed, network response not ok');
+      }
+
+      const data = await response.json();
+      setResult(data.result);
+      setError(null);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      setResult(null);
+      setError('An error occurred while performing the addition.'); // Set error message
+    }
   };
 
   // Function to handle subtraction
   const handleSubtract = async () => {
-    const response = await fetch('/api/subtract', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: new URLSearchParams({
-        num1: num1,
-        num2: num2
-      })
-    });
-    const data = await response.json();
-    setResult(data.result);
+    try {
+      const response = await fetch('/api/subtract', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({
+          num1: num1,
+          num2: num2
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('Request failed, network response not ok');
+      }
+
+      const data = await response.json();
+      setResult(data.result);
+      setError(null);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      setResult(null);  
+      setError('An error occurred while performing the subtraction.'); // Set error message
+    }    
   };
 
   return (
@@ -71,6 +96,9 @@ function App() {
       <div className="result">
         {result !== null && (
           <p>Result: {result}</p>
+        )}
+        {error && (
+          <p>{error}</p>
         )}
       </div>
     </div>
